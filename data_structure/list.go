@@ -106,4 +106,5 @@ func (list *DoubleList[T]) InsertBefore(x T, n3 *ListNode[T]) {
 	n3.Prev = n2
 	n2.Next = n3
 	list.Length += 1
+
 }
