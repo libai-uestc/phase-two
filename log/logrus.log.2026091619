@@ -1,0 +1,4 @@
+{"age":18,"file":"C:/Users/18101/Desktop/第二阶段/phase-two/io/logrus_test.go:14","func":"libai/go/phase-two/io_test.TestLogrus","level":"info","msg":"this is info log","name":"libai","time":"2026-09-16 19:58:28.365"}
+{"age":18,"file":"C:/Users/18101/Desktop/第二阶段/phase-two/io/logrus_test.go:15","func":"libai/go/phase-two/io_test.TestLogrus","level":"warning","msg":"this is warn log, float=3.140","name":"libai","time":"2026-09-16 19:58:28.373"}
+{"file":"C:/Users/18101/Desktop/第二阶段/phase-two/io/logrus_test.go:16","func":"libai/go/phase-two/io_test.TestLogrus","level":"error","msg":"this is error log1this is error log2","time":"2026-09-16 19:58:28.373"}
+{"file":"C:/Users/18101/Desktop/第二阶段/phase-two/io/logrus_test.go:22","func":"libai/go/phase-two/io_test.TestLogrus","level":"panic","msg":"this is panic log","time":"2026-09-16 19:58:28.373"}
