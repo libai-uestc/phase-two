@@ -1,0 +1,7 @@
+2026-09-17 11:16:31.804	INFO	io/zap_test.go:14	hello	{"libai": {"biz": "search", "age": 18}}
+2026-09-17 11:16:31.812	ERROR	io/zap_test.go:15	hello	{"libai": {"biz": "search", "china": {"age": 18}}}
+libai/go/phase-two/io_test.TestZap1
+	C:/Users/18101/Desktop/第二阶段/phase-two/io/zap_test.go:15
+testing.tRunner
+	C:/Program Files/Go/src/testing/testing.go:1934
+2026-09-17 11:16:31.812	INFO	io/zap_test.go:18	pi is 3.141593	{"libai": {"biz": "search"}}
