@@ -1,0 +1,2 @@
+INFO	hello	{"biz": "search", "libai": {"group": "game", "age": 18}}
+ERROR	hello	{"biz": "search", "libai": {"group": "game", "china": {"age": 18}}}
