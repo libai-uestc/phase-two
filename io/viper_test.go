@@ -25,7 +25,7 @@ func TestViper(t *testing.T) {
 	logViper := io.InitViper("../conf", "log", io.YAML)
 	type LogConfig struct {
 		Level string `mapstructure:"level"`
-		File  string `mapstructure:"file`
+		File  string `mapstructure:"file"`
 	}
 	var config LogConfig
 	if err := logViper.Unmarshal(&config); err != nil {
