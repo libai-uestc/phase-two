@@ -1,0 +1,11 @@
+blog:
+  host: localhost
+  port: 3306
+  user: tester
+  pass: 123456
+  log: blog.db.log
+gift:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  pass: 030507
