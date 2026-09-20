@@ -1,6 +1,6 @@
 module libai/go/phase-two
 
-go 1.25.12
+go 1.26.0
 
 require (
 	github.com/bytedance/gopkg v0.1.3 // indirect
@@ -42,6 +42,7 @@ require (
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/crypto v0.53.0 // indirect
+	golang.org/x/exp v0.0.0-20260908205506-85c1c2202aba // indirect
 	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/sys v0.46.0 // indirect
 	golang.org/x/text v0.38.0 // indirect
