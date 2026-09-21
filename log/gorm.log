@@ -1,0 +1,15 @@
+
+2026/09/21 23:22:57 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13 Error 1054 (42S22): Unknown column 'key_words' in 'field list'
+[1.775ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`key_words`,`create_time`,`update_time`,`gender`,`city`) VALUES (98836,'本科','["编程","golang"]','2026-09-21 23:22:57.973','2026-09-21 23:22:57.973','男','上海')
+
+2026/09/21 23:29:24 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13 Error 1054 (42S22): Unknown column 'create_time' in 'field list'
+[0.516ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (71038,'本科','["编程","golang"]','2026-09-21 23:29:24.656','2026-09-21 23:29:24.656','男','上海')
+
+2026/09/21 23:33:01 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13 Error 1054 (42S22): Unknown column 'create_time' in 'field list'
+[0.515ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (84151,'本科','["编程","golang"]','2026-09-21 23:33:01.054','2026-09-21 23:33:01.054','男','上海')
+
+2026/09/21 23:34:34 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13 Error 1054 (42S22): Unknown column 'create_time' in 'field list'
+[0.537ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (34047,'本科','["编程","golang"]','2026-09-21 23:34:34.791','2026-09-21 23:34:34.791','男','上海')
+
+2026/09/21 23:38:32 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13
+[8.646ms] [rows:1] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (68205,'本科','["编程","golang"]','2026-09-21 23:38:32.593','2026-09-21 23:38:32.593','男','上海')
