@@ -217,3 +217,60 @@
 
 2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:50
 [4.540ms] [rows:1] UPDATE `user` SET `uid`=17659,`degree`='硕士',`keywords`='[]',`create_time`='2026-09-22 11:27:10',`update_time`='2026-09-22 11:27:10.262',`gender`='男',`city`='上海' WHERE `id` = 6
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:14
+[8.404ms] [rows:0] SELECT uid,city,gender,keywords FROM `user` WHERE (uid>100 and degree='大专') AND city in ('北京','上海') AND degree like '%科' OR gender='女' AND `user`.`id` = 3 ORDER BY id desc, uid,city,`user`.`id` LIMIT 1 OFFSET 3
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:42
+[0.511ms] [rows:1] SELECT * FROM `user`
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:58
+[0.000ms] [rows:1] SELECT * FROM `user` LIMIT 3
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:77
+[0.068ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 23212
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:92
+[0.606ms] [rows:1] SELECT * FROM `user` USE INDEX (`id`,`idx_uid`) WHERE uid>0
+
+2026/09/22 22:26:55 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:93
+[0.000ms] [rows:1] SELECT * FROM `user` FORCE INDEX (`idx_uid`) WHERE uid>0
+
+2026/09/22 22:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:103
+[1.071ms] [rows:1] SELECT city,avg(id) as mid FROM `user` GROUP BY `city` HAVING mid>0
+
+2026/09/22 22:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:109
+[0.000ms] [rows:1] SELECT DISTINCT `city` FROM `user`
+
+2026/09/22 22:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/read.go:116
+[0.518ms] [rows:1] SELECT count(*) FROM `user` WHERE city='北京'
+
+2026/09/22 22:27:19 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/raw_sql.go:11 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from user where id>? and uid>? limit 3' at line 1
+[0.000ms] [rows:-] select id,uid,city, from user where id>2 and uid>4 limit 3
+
+2026/09/22 22:27:19 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/raw_sql.go:17
+[0.540ms] [rows:-] select id,uid,city from user where id>2 and uid>4 limit 3
+
+2026/09/22 22:27:27 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/raw_sql.go:30
+[0.510ms] [rows:0] update user set degree='专科' where id=30
+
+2026/09/22 22:27:36 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/error.go:13
+[4.400ms] [rows:1] SELECT * FROM `user` ORDER BY `user`.`id` LIMIT 1
+
+2026/09/22 22:27:36 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 22:27:36 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 22:27:36 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/error.go:15 Error 1062 (23000): Duplicate entry '6' for key 'user.PRIMARY'
+[0.517ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`,`id`) VALUES (17659,'硕士','[]','2026-09-22 11:27:10','2026-09-22 11:27:10','男','上海',6)
+
+2026/09/22 22:27:43 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 22:27:43 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 22:27:43 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/transaction.go:27 Error 1048 (23000): Column 'keywords' cannot be null
+[4.236ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (82543,'本科',NULL,'2026-09-22 22:27:43.497','2026-09-22 22:27:43.497','男','上海')
