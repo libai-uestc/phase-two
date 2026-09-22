@@ -26,3 +26,7 @@ func TestCreateByMap(t *testing.T) {
 		t.Error(err)
 	}
 }
+
+func TestDelete(t *testing.T) {
+	gorm.Delete(db)
+}

@@ -28,3 +28,15 @@
 
 2026/09/22 10:27:03 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:54
 [3.980ms] [rows:2] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`keywords`,`uid`) VALUES ('北京','2026-09-22 10:27:03.352','本科','男','[]',60389),('深圳','2026-09-22 10:27:03.352','本科','男','[]',42190)
+
+2026/09/22 11:04:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/delete.go:10
+[4.327ms] [rows:5] DELETE FROM `user` WHERE degree='本科'
+
+2026/09/22 11:04:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/delete.go:13
+[0.000ms] [rows:0] DELETE FROM `user` WHERE `user`.`id` = 10
+
+2026/09/22 11:04:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/delete.go:15
+[0.513ms] [rows:0] DELETE FROM `user` WHERE `user`.`id` = 1
+
+2026/09/22 11:04:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/delete.go:16
+[0.000ms] [rows:0] DELETE FROM `user` WHERE `user`.`id` IN (1,2,3)
