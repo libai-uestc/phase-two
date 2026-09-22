@@ -40,3 +40,180 @@
 
 2026/09/22 11:04:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/delete.go:16
 [0.000ms] [rows:0] DELETE FROM `user` WHERE `user`.`id` IN (1,2,3)
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:22
+[4.705ms] [rows:0] UPDATE `user` SET `degree`='硕士',`gender`='男',`update_time`='2026-09-22 11:15:51.645' WHERE city='北京'
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:15:51 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:26
+[0.000ms] [rows:0] UPDATE `user` SET `id`=1,`degree`='本科',`update_time`='2026-09-22 11:15:51.646',`gender`='男' WHERE city='北京'
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:12 Error 1048 (23000): Column 'keywords' cannot be null
+[3.725ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (87589,'本科',NULL,'2026-09-22 11:16:33.038','2026-09-22 11:16:33.038','男','上海')
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:15
+[0.511ms] [rows:0] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:16:33 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:17 Error 1048 (23000): Column 'keywords' cannot be null
+[0.000ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (0,'硕士',NULL,'2026-09-22 11:16:33.038','2026-09-22 11:16:33.038','','')
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:22
+[4.353ms] [rows:0] UPDATE `user` SET `degree`='硕士',`gender`='男',`update_time`='2026-09-22 11:16:37.206' WHERE city='北京'
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:16:37 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:26
+[0.569ms] [rows:0] UPDATE `user` SET `id`=1,`degree`='本科',`update_time`='2026-09-22 11:16:37.207',`gender`='男' WHERE city='北京'
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:12 Error 1048 (23000): Column 'keywords' cannot be null
+[4.710ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (32948,'本科',NULL,'2026-09-22 11:16:50.17','2026-09-22 11:16:50.17','男','上海')
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:15
+[0.000ms] [rows:0] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:16:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:17 Error 1048 (23000): Column 'keywords' cannot be null
+[0.512ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (0,'硕士',NULL,'2026-09-22 11:16:50.171','2026-09-22 11:16:50.171','','')
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:12 Error 1048 (23000): Column 'keywords' cannot be null
+[3.634ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (71040,'本科',NULL,'2026-09-22 11:19:50.071','2026-09-22 11:19:50.071','男','上海')
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:15
+[0.505ms] [rows:0] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:19:50 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:17 Error 1048 (23000): Column 'keywords' cannot be null
+[0.117ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (0,'硕士',NULL,'2026-09-22 11:19:50.071','2026-09-22 11:19:50.071','','')
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:12 Error 1048 (23000): Column 'keywords' cannot be null
+[4.291ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (46904,'本科',NULL,'2026-09-22 11:22:56.674','2026-09-22 11:22:56.674','男','上海')
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:15
+[0.000ms] [rows:0] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:22:56 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:17 Error 1048 (23000): Column 'keywords' cannot be null
+[0.000ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (0,'硕士',NULL,'2026-09-22 11:22:56.675','2026-09-22 11:22:56.675','','')
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:13 Error 1048 (23000): Column 'keywords' cannot be null
+[4.326ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (7393,'本科',NULL,'2026-09-22 11:23:39.643','2026-09-22 11:23:39.643','男','上海')
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:16
+[0.000ms] [rows:0] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:23:39 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:18 Error 1048 (23000): Column 'keywords' cannot be null
+[0.000ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (0,'硕士',NULL,'2026-09-22 11:23:39.644','2026-09-22 11:23:39.644','','')
+
+2026/09/22 11:25:22 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:25:22 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:25:22 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:32 Error 1048 (23000): Column 'keywords' cannot be null
+[4.237ms] [rows:0] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (41233,'本科',NULL,'2026-09-22 11:25:22.621','2026-09-22 11:25:22.621','男','上海')
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:70
+[info] exec hook BeforeCreate
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:75
+[info] exec hook AfterCreate
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:32
+[6.661ms] [rows:1] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (17659,'本科','[]','2026-09-22 11:27:10.258','2026-09-22 11:27:10.258','男','上海')
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:41
+[0.000ms] [rows:1] SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:65
+[info] exec hook BeforeSave
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:80
+[info] exec hook AfterSave
+
+2026/09/22 11:27:10 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/update.go:50
+[4.540ms] [rows:1] UPDATE `user` SET `uid`=17659,`degree`='硕士',`keywords`='[]',`create_time`='2026-09-22 11:27:10',`update_time`='2026-09-22 11:27:10.262',`gender`='男',`city`='上海' WHERE `id` = 6

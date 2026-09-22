@@ -30,3 +30,11 @@ func TestCreateByMap(t *testing.T) {
 func TestDelete(t *testing.T) {
 	gorm.Delete(db)
 }
+
+func TestSave(t *testing.T) {
+	gorm.Save(db)
+}
+
+func TestUpdate(t *testing.T) {
+	gorm.Update(db)
+}

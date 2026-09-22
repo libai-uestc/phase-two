@@ -22,6 +22,6 @@ type User struct {
 }
 
 // 显式指定表名
-// func (User) TableName() string {
-// 	return "user"
-// }
+func (User) TableName() string {
+	return "user"
+}
