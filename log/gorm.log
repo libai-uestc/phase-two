@@ -13,3 +13,18 @@
 
 2026/09/21 23:38:32 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:13
 [8.646ms] [rows:1] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`gender`,`city`) VALUES (68205,'本科','["编程","golang"]','2026-09-21 23:38:32.593','2026-09-21 23:38:32.593','男','上海')
+
+2026/09/22 09:50:41 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:44 Error 1364 (HY000): Field 'keywords' doesn't have a default value
+[7.405ms] [rows:0] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`uid`) VALUES ('上海','2026-09-22 09:50:41.762','本科','男',72802)
+
+2026/09/22 10:26:11 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:44
+[14.851ms] [rows:1] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`keywords`,`uid`) VALUES ('上海','2026-09-22 10:26:11.423','本科','男','[]',39603)
+
+2026/09/22 10:26:11 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:54 Error 1364 (HY000): Field 'keywords' doesn't have a default value
+[0.000ms] [rows:0] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`uid`) VALUES ('北京','2026-09-22 10:26:11.438','本科','男',46271),('深圳','2026-09-22 10:26:11.438','本科','男',28726)
+
+2026/09/22 10:27:03 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:44
+[7.726ms] [rows:1] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`keywords`,`uid`) VALUES ('上海','2026-09-22 10:27:03.344','本科','男','[]',41731)
+
+2026/09/22 10:27:03 C:/Users/18101/Desktop/第二阶段/phase-two/orm/gorm/create.go:54
+[3.980ms] [rows:2] INSERT INTO `user` (`city`,`create_time`,`degree`,`gender`,`keywords`,`uid`) VALUES ('北京','2026-09-22 10:27:03.352','本科','男','[]',60389),('深圳','2026-09-22 10:27:03.352','本科','男','[]',42190)

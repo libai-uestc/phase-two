@@ -19,3 +19,10 @@ func TestCreate(t *testing.T) {
 
 // go test -v ./orm/gorm -run=^TestGormQuickStart$ -count=1
 // go test -v ./orm/gorm -run=^TestCreate$ -count=1
+
+func TestCreateByMap(t *testing.T) {
+	err := gorm.CreateByMap(db)
+	if err != nil {
+		t.Error(err)
+	}
+}
