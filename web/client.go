@@ -3,23 +3,25 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
+	"google.golang.org/protobuf/proto"
+	"gopkg.in/yaml.v2"
 	"io"
 	"libai/go/phase-two/web/idl"
 	"log/slog"
 	"net/http"
 	"net/url"
 	"os"
-
-	"go.yaml.in/yaml/v3"
-	"google.golang.org/protobuf/proto"
+	"strings"
+	"time"
 )
 
 // go run ./web
 
 type Student struct {
-	Name    string `form:"username" uri:"user" json:"name" xml:"user"`
-	Address string `form:"addr" uri:"addr" json:"addr" xml:"addr"`
+	Name    string `form:"username" uri:"user" json:"name" xml:"user" yaml:"user" binding:"required"`
+	Address string `form:"addr" uri:"addr" json:"addr" xml:"addr" yaml:"addr" binding:"required"`
 }
 
 type User struct {
@@ -111,6 +113,19 @@ func PostJson(path string, stu Student) {
 	}
 }
 
+func PostXml(path string, stu Student) {
+	fmt.Println("post xml " + path)
+	if bs, err := xml.Marshal(stu); err == nil {
+		if resp, err := http.Post("http://127.0.0.1:5678"+path, "application/xml", bytes.NewReader(bs)); err != nil {
+			panic(err)
+		} else {
+			processResponse(resp)
+		}
+	} else {
+		slog.Error("xml marchal failed", "error", err)
+	}
+}
+
 func PostYaml(path string, stu Student) {
 	fmt.Println("post yaml " + path)
 	if bs, err := yaml.Marshal(stu); err == nil {
@@ -124,7 +139,67 @@ func PostYaml(path string, stu Student) {
 	}
 }
 
+func PostPb(path string, stu Student) {
+	fmt.Println("post pb" + path)
+	inst := idl.Student{Name: stu.Name, Address: stu.Address}
+	if bs, err := proto.Marshal(&inst); err == nil {
+		if resp, err := http.Post("http://127.0.0.1:5678"+path, "application/x-protobuf", bytes.NewReader(bs)); err != nil {
+			panic(err)
+		} else {
+			processResponse(resp)
+		}
+	} else {
+		slog.Error("yaml marchal failed", "error", err)
+	}
+}
+
+func PostAll(path string, stu Student) {
+	PostForm(path, stu)
+	PostJson(path, stu)
+	PostXml(path, stu)
+	PostYaml(path, stu)
+	PostPb(path, stu)
+}
+
+func Request(path, method string, body []byte) {
+	request, err := http.NewRequest(method, "http://127.0.0.1:5678"+path, bytes.NewReader(body))
+	if err != nil {
+		panic(err)
+	}
+	request.AddCookie(
+		&http.Cookie{
+			Name:  "token",
+			Value: "ye38ry4928---",
+		},
+	)
+	client := &http.Client{
+		Timeout: 500 * time.Millisecond,
+	}
+	if resp, err := client.Do(request); err != nil {
+		fmt.Println(err)
+	} else {
+		defer resp.Body.Close()
+		if resp.StatusCode != 200 {
+			io.Copy(os.Stdout, resp.Body)
+			return
+		}
+		fmt.Println("response header:")
+		if values, exists := resp.Header["Set-Cookie"]; exists {
+			fmt.Println(values[0])
+			cookie, _ := http.ParseSetCookie(values[0])
+			fmt.Println("Name:", cookie.Name)
+			fmt.Println("Value:", cookie.Value)
+			fmt.Println("Domain:", cookie.Domain)
+			fmt.Println("MaxAge:", cookie.MaxAge)
+			fmt.Println(strings.Repeat("-", 50))
+		}
+		os.Stdout.WriteString("\n\n")
+	}
+}
+
 func main() {
-	Get("/home")
+	student := Student{Name: "李白", Address: "江浙沪"}
 	// Get("/home")
+	// Get("/home")
+	PostAll("/stu/multi_type", student)
 }

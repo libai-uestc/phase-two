@@ -167,15 +167,37 @@ func yamlBind(engine *gin.Engine) {
 	})
 }
 
+// func multiBind(engine *gin.Engine) {
+// 	engine.POST("/stu/multi_type", func(ctx *gin.Context) {
+// 		var stu Student
+// 		var stu2 idl.Student
+// 		if err := ctx.ShouldBindBodyWith(&stu, binding.JSON); err == nil {
+// 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
+// 		} else if err := ctx.ShouldBindBodyWith(&stu, binding.XML); err == nil {
+// 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
+// 		} else if err := ctx.ShouldBindBodyWith(&stu, binding.YAML); err == nil {
+// 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
+// 		} else if err := ctx.ShouldBindBodyWith(&stu2, binding.ProtoBuf); err == nil {
+// 			ctx.String(http.StatusOK, stu2.Name+" live in "+stu2.Address)
+// 		} else {
+// 			ctx.String(http.StatusBadRequest, "不支持的参数类型")
+// 		}
+// 	})
+// }
+
 func multiBind(engine *gin.Engine) {
 	engine.POST("/stu/multi_type", func(ctx *gin.Context) {
 		var stu Student
 		var stu2 idl.Student
+
+		// Form 一般直接用 ShouldBind 即可
 		if err := ctx.ShouldBindBodyWith(&stu, binding.JSON); err == nil {
 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
 		} else if err := ctx.ShouldBindBodyWith(&stu, binding.XML); err == nil {
 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
 		} else if err := ctx.ShouldBindBodyWith(&stu, binding.YAML); err == nil {
+			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
+		} else if err := ctx.ShouldBind(&stu); err == nil { // 增加对 Form 的兼容处理
 			ctx.String(http.StatusOK, stu.Name+" live in "+stu.Addr)
 		} else if err := ctx.ShouldBindBodyWith(&stu2, binding.ProtoBuf); err == nil {
 			ctx.String(http.StatusOK, stu2.Name+" live in "+stu2.Address)
