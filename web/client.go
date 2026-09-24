@@ -89,38 +89,40 @@ func GetStudentPB(path string) {
 	os.Stdout.WriteString("\n\n")
 }
 
-func PostForm(path string,stu Student){
+func PostForm(path string, stu Student) {
 	fmt.Println("post form " + path)
-	if resp,err := http.PostForm("http://127.0.0.1:5678"+path,url.Values
-	{"username":{stu.Name},"addr":{stu.Address}})
+	if resp, err := http.PostForm("http://127.0.0.1:5678"+path, url.Values{"username": {stu.Name}, "addr": {stu.Address}}); err != nil {
+		panic(err)
+	} else {
+		processResponse(resp)
+	}
 }
 
-func PostJson(path string,stu Student){
-	fmt.Println("post json "+ path)
-	if bs,err := json.Marshal(stu);err == nil {
-		if resp,err := http.Post("http://127.0.0.1:5678"+path,"application/xml",bytes.NewReader(bs));err != nil{
+func PostJson(path string, stu Student) {
+	fmt.Println("post json " + path)
+	if bs, err := json.Marshal(stu); err == nil {
+		if resp, err := http.Post("http://127.0.0.1:5678"+path, "application/xml", bytes.NewReader(bs)); err != nil {
 			panic(err)
 		} else {
 			processResponse(resp)
 		}
 	} else {
-		slog.Error("xml marchal failed","error",err)
+		slog.Error("xml marchal failed", "error", err)
 	}
 }
 
-func PostYaml(path string,stu Student){
+func PostYaml(path string, stu Student) {
 	fmt.Println("post yaml " + path)
-	if bs,err := yaml.Marshal(stu);err == nil {
-		if resp,err := http.Post("http://127.0.0.1:5678"+path, "application/json",bytes.NewReader(bs)); err != nil {
+	if bs, err := yaml.Marshal(stu); err == nil {
+		if resp, err := http.Post("http://127.0.0.1:5678"+path, "application/json", bytes.NewReader(bs)); err != nil {
 			panic(err)
 		} else {
 			processResponse(resp)
 		}
 	} else {
-		slog.Error("json marchal failed","error",err)
+		slog.Error("json marchal failed", "error", err)
 	}
 }
-
 
 func main() {
 	Get("/home")
