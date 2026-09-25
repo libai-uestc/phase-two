@@ -207,7 +207,7 @@ func multiBind(engine *gin.Engine) {
 	})
 }
 
-func main() {
+func main5() {
 	engine := gin.Default()
 	url(engine)
 	restful(engine)
