@@ -1,0 +1,42 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /favicon.ico              --> main.main.(*RouterGroup).StaticFile.func1 (3 handlers)
+[GIN-debug] HEAD   /favicon.ico              --> main.main.(*RouterGroup).StaticFile.func1 (3 handlers)
+[GIN-debug] GET    /user/text                --> main.text.func1 (3 handlers)
+[GIN-debug] GET    /user/json0               --> main.json0.func1 (3 handlers)
+[GIN-debug] GET    /user/json1               --> main.json1.func1 (3 handlers)
+[GIN-debug] GET    /user/json2               --> main.json2.func1 (3 handlers)
+[GIN-debug] GET    /user/jsonp               --> main.jsonp.func1 (3 handlers)
+[GIN-debug] GET    /user/xml                 --> main.xml.func1 (3 handlers)
+[GIN-debug] GET    /user/yaml                --> main.yaml.func1 (3 handlers)
+[GIN-debug] GET    /user/pb                  --> main.protoBuf.func1 (3 handlers)
+[GIN-debug] GET    /user/html                --> main.html.func1 (3 handlers)
+[GIN-debug] GET    /user/old_page            --> main.redirect.func1 (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://github.com/gin-gonic/gin/blob/master/docs/doc.md#dont-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on 127.0.0.1:5678
+[GIN] 2026/09/26 - 00:42:55 | 200 |       0s |       127.0.0.1 | GET      "/user/html"
+[GIN] 2026/09/26 - 00:42:55 | 200 |  44.03ms |       127.0.0.1 | GET      "/css/libai.css"
+[GIN] 2026/09/26 - 00:43:20 | 404 |       0s |       127.0.0.1 | GET      "/123123+"
+[GIN] 2026/09/26 - 00:43:43 | 404 |       0s |       127.0.0.1 | POST     "/stu/multi_type"
+[GIN] 2026/09/26 - 00:43:43 | 404 |       0s |       127.0.0.1 | POST     "/stu/multi_type"
+[GIN] 2026/09/26 - 00:43:43 | 404 |       0s |       127.0.0.1 | POST     "/stu/multi_type"
+[GIN] 2026/09/26 - 00:43:43 | 404 |       0s |       127.0.0.1 | POST     "/stu/multi_type"
+[GIN] 2026/09/26 - 00:43:43 | 404 |       0s |       127.0.0.1 | POST     "/stu/multi_type"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/text"
+[GIN] 2026/09/26 - 00:45:06 | 200 |  601.8µs |       127.0.0.1 | GET      "/user/json0"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/json1"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/json2"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/jsonp?callback=yyds"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/jsonp"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/xml"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/yaml"
+[GIN] 2026/09/26 - 00:45:06 | 200 |       0s |       127.0.0.1 | GET      "/user/html"
+[GIN] 2026/09/26 - 00:45:06 | 301 |       0s |       127.0.0.1 | GET      "/user/old_page"
+[GIN] 2026/09/26 - 00:45:06 | 200 |  537.7µs |       127.0.0.1 | GET      "/user/html"

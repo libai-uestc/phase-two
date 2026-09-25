@@ -198,8 +198,18 @@ func Request(path, method string, body []byte) {
 }
 
 func main() {
-	student := Student{Name: "李白", Address: "江浙沪"}
+	// student := Student{Name: "李白", Address: "江浙沪"}
 	// Get("/home")
 	// Get("/home")
-	PostAll("/stu/multi_type", student)
+	// PostAll("/stu/multi_type", student)
+	Get("/user/text")
+	Get("/user/json0")
+	Get("/user/json1")
+	Get("/user/json2")
+	Get("/user/jsonp?callback=yyds") //使用JSONP可以向不同域的服务器请求数据
+	Get("/user/jsonp")               //使用JSONP可以向不同域的服务器请求数据
+	Get("/user/xml")
+	Get("/user/yaml")
+	Get("/user/html")
+	Get("/user/old_page")
 }

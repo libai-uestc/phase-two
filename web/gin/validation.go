@@ -48,7 +48,7 @@ func processErr(err error) string {
 	}
 }
 
-func main() {
+func main8() {
 	engine := gin.Default()
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
 		v.RegisterValidation("before_today", beforeToday)
