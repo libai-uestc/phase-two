@@ -5,8 +5,6 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
-	"google.golang.org/protobuf/proto"
-	"gopkg.in/yaml.v2"
 	"io"
 	"libai/go/phase-two/web/idl"
 	"log/slog"
@@ -15,6 +13,9 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"google.golang.org/protobuf/proto"
+	"gopkg.in/yaml.v2"
 )
 
 // go run ./web
@@ -169,7 +170,7 @@ func Request(path, method string, body []byte) {
 	request.AddCookie(
 		&http.Cookie{
 			Name:  "token",
-			Value: "ye38ry4928---",
+			Value: "123456789",
 		},
 	)
 	client := &http.Client{
@@ -202,14 +203,17 @@ func main() {
 	// Get("/home")
 	// Get("/home")
 	// PostAll("/stu/multi_type", student)
-	Get("/user/text")
-	Get("/user/json0")
-	Get("/user/json1")
-	Get("/user/json2")
-	Get("/user/jsonp?callback=yyds") //使用JSONP可以向不同域的服务器请求数据
-	Get("/user/jsonp")               //使用JSONP可以向不同域的服务器请求数据
-	Get("/user/xml")
-	Get("/user/yaml")
-	Get("/user/html")
-	Get("/user/old_page")
+	// Request("127.0.0.1:5678/",,)
+	// Get("/user/text")
+	// Get("/user/json0")
+	// Get("/user/json1")
+	// Get("/user/json2")
+	// Get("/user/jsonp?callback=yyds") //使用JSONP可以向不同域的服务器请求数据
+	// Get("/user/jsonp")               //使用JSONP可以向不同域的服务器请求数据
+	// Get("/user/xml")
+	// Get("/user/yaml")
+	// Get("/user/html")
+	// Get("/user/old_page")
+
+	Request("/ck", http.MethodGet, nil)
 }

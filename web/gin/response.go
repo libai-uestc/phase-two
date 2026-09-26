@@ -108,7 +108,7 @@ func redirect(engine *gin.Engine) {
 	})
 }
 
-func main() {
+func main9() {
 	fout, _ := os.OpenFile("log/gin.log", os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0666)
 	gin.DefaultWriter = io.MultiWriter(os.Stdout, fout)
 	engine := gin.Default()
