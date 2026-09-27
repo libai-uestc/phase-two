@@ -30,7 +30,7 @@ func CreateConnection(host, dbname, user, pass string, port int) *gorm.DB {
 		PrepareStmt:            true,
 		SkipDefaultTransaction: true,
 		NamingStrategy: schema.NamingStrategy{
-			SingularTable: true,
+			SingularTable: true, // 表名映射时不加复数，仅是驼峰->蛇形
 		},
 		Logger:                   newLogger,
 		DryRun:                   false,

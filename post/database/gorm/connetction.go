@@ -1,0 +1,106 @@
+package database
+
+import (
+	"fmt"
+	"libai/go/phase-two/post/util"
+	"log"
+	"os"
+	"path"
+	"time"
+
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
+	"gorm.io/gorm/schema"
+)
+
+var (
+	PostDB *gorm.DB
+)
+
+func ConnectPostDB(confDir, confFile, fileType, logDir string) {
+	viper := util.InitViper(confDir, confFile, fileType)
+	user := viper.GetString("post.user")
+	pass := viper.GetString("post.pass")
+	host := viper.GetString("post.host")
+	port := viper.GetInt("post.port")
+	dbname := "post"
+	logFileName := viper.GetString("post.log")
+	DataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", user, pass, host, port, dbname)
+
+	logFile, _ := os.OpenFile(path.Join(logDir, logFileName), os.O_CREATE|os.O_APPEND|os.O_WRONLY, os.ModePerm)
+	newLogger := logger.New(
+		log.New(logFile, "\r\n", log.LstdFlags),
+		logger.Config{
+			SlowThreshold:             100 * time.Millisecond,
+			LogLevel:                  logger.Info,
+			IgnoreRecordNotFoundError: true,
+			Colorful:                  false,
+		},
+	)
+	db, err := gorm.Open(mysql.Open(DataSourceName), &gorm.Config{
+		PrepareStmt:            true,
+		SkipDefaultTransaction: true,
+		NamingStrategy: schema.NamingStrategy{
+			SingularTable: true,
+		},
+		Logger: newLogger,
+	})
+	if err != nil {
+		panic(err)
+	}
+	sqlDB, _ := db.DB()
+	sqlDB.SetMaxIdleConns(10)
+	sqlDB.SetMaxOpenConns(100)
+	sqlDB.SetConnMaxLifetime(time.Hour)
+	PostDB = db
+}
+
+// package gorm
+
+// import (
+// 	"fmt"
+// 	"log"
+// 	"os"
+// 	// "runtime/trace"
+// 	"time"
+
+// 	"gorm.io/driver/mysql"
+// 	"gorm.io/gorm"
+// 	"gorm.io/gorm/logger"
+// 	"gorm.io/gorm/schema"
+// )
+
+// func CreateConnection(host, dbname, user, pass string, port int) *gorm.DB {
+// 	DataSourceName := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", user, pass, host, port, dbname)
+// 	logFile, _ := os.OpenFile("C:/Users/18101/Desktop/第二阶段/phase-two/log/gorm.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, os.ModePerm)
+// 	newLogger := logger.New(
+// 		log.New(logFile, "\r\n", log.LstdFlags),
+// 		logger.Config{
+// 			SlowThreshold:             500 * time.Millisecond,
+// 			LogLevel:                  logger.Info,
+// 			IgnoreRecordNotFoundError: true,
+// 			ParameterizedQueries:      false,
+// 			Colorful:                  false,
+// 		},
+// 	)
+// 	db, err := gorm.Open(mysql.Open(DataSourceName), &gorm.Config{
+// 		PrepareStmt:            true,
+// 		SkipDefaultTransaction: true,
+// 		NamingStrategy: schema.NamingStrategy{
+// 			SingularTable: true, // 表名映射时不加复数，仅是驼峰->蛇形
+// 		},
+// 		Logger:                   newLogger,
+// 		DryRun:                   false,
+// 		DisableNestedTransaction: true,
+// 		DisableAutomaticPing:     false,
+// 	})
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	sqlDB, _ := db.DB()
+// 	sqlDB.SetMaxIdleConns(10)
+// 	sqlDB.SetMaxOpenConns(100)
+// 	sqlDB.SetConnMaxLifetime(time.Hour)
+// 	return db
+// }
