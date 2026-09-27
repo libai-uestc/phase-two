@@ -7,7 +7,7 @@ create table if not exists user(
     id int auto_increment comment '用户id，自增',
     name varchar(20) not null comment '用户名',
     password varchar(32) not null comment '密码的md5',
-    create_time datetime default current_timestamp commnet '用户注册时间',
+    create_time datetime default current_timestamp comment '用户注册时间',
     update_time datetime default current_timestamp on update current_timestamp comment '最后修改时间',
     primary key (id),
     unique key idx_name (name)
