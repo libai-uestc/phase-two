@@ -52,3 +52,9 @@
 
 2026/09/27 23:23:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:34
 [0.000ms] [rows:0] DELETE FROM `user` WHERE `user`.`id` = 1
+
+2026/09/29 12:15:08 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[22.636ms] [rows:0] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/09/29 12:20:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[0.672ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
