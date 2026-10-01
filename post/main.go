@@ -26,7 +26,7 @@ func main() {
 	engine.GET("/login", func(ctx *gin.Context) {
 		ctx.HTML(200, "login.html", nil)
 	})
-
+	engine.POST("/login", func(ctx *gin.Context) { ctx.HTML(200, "login.html", nil) })
 	engine.GET("/regist", func(ctx *gin.Context) {
 		ctx.HTML(200, "user_regist.html", nil)
 	})
@@ -36,7 +36,8 @@ func main() {
 	})
 
 	engine.POST("/login/submit", handler.Login)
+	engine.POST("/regist/submit", handler.RegistUser)
 	engine.POST("/modify_pass/submit", handler.UpdatePassword)
-
+	// engine.GET("/user", handler.)
 	engine.Run("localhost:5678")
 }

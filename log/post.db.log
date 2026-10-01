@@ -58,3 +58,12 @@
 
 2026/09/29 12:20:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
 [0.672ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/01 16:55:37 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:22
+[15.801ms] [rows:1] INSERT INTO `news` (`user_id`,`title`,`article`,`create_time`,`delete_time`) VALUES (7,'行路难','行路难，行路难，多歧路，今安在？','2026-10-01 16:55:37.15',NULL)
+
+2026/10/01 19:49:35 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:18
+[19.468ms] [rows:1] INSERT INTO `user` (`name`,`password`) VALUES ('libai','e10adc3949ba59abbe56e057f20f883e')
+
+2026/10/01 19:49:41 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[2.037ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1

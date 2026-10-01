@@ -77,7 +77,7 @@ func GetNewsByUid(uid int) []*model.News {
 	return news
 }
 
-func GetNewsByPae(pageNo, pageSize int) (int, []*model.News) {
+func GetNewsByPage(pageNo, pageSize int) (int, []*model.News) {
 	var total int64
 	err := PostDB.Model(model.News{}).Where("delete_time is null").Count(&total).Error
 	if err != nil {
