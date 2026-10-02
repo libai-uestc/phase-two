@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	DefautHeader = JwtHeader{
+	DefaultHeader = JwtHeader{
 		Algo: "HS256",
 		Type: "JWT",
 	}

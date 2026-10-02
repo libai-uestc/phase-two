@@ -4,6 +4,7 @@ import (
 	database "libai/go/phase-two/post/database/gorm"
 	handler "libai/go/phase-two/post/handler/gin"
 	"libai/go/phase-two/post/util"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -38,6 +39,25 @@ func main() {
 	engine.POST("/login/submit", handler.Login)
 	engine.POST("/regist/submit", handler.RegistUser)
 	engine.POST("/modify_pass/submit", handler.UpdatePassword)
-	// engine.GET("/user", handler.)
-	engine.Run("localhost:5678")
+	engine.GET("/user", handler.GetUserInfo)
+	engine.GET("/logout", handler.Logout)
+
+	group := engine.Group("/news")
+	group.GET("", handler.NewsList)
+	group.GET("/issue", func(ctx *gin.Context) {
+		ctx.HTML(http.StatusOK, "news_issue.html", nil)
+	})
+	group.POST("/issue/submit", handler.Auth, handler.PostNews)
+	group.GET("/belong", handler.NewsBelong)
+	group.GET("/:id", handler.GetNewsById)
+	group.GET("/delete/:id", handler.Auth, handler.DeleteNews)
+	group.POST("/update", handler.Auth, handler.UpdateNews)
+
+	engine.GET("", func(ctx *gin.Context) {
+		ctx.Redirect(http.StatusMovedPermanently, "news")
+	})
+
+	if err := engine.Run("localhost:5678"); err != nil {
+		panic(err)
+	}
 }

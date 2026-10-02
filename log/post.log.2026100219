@@ -1,0 +1,27 @@
+time="2026-10-02 19:46:41.500" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:50:35.835" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:50:45.619" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:85 msg=登录成功 uid=4
+time="2026-10-02 19:50:45.632" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:54:27.516" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:85 msg=登录成功 uid=4
+time="2026-10-02 19:54:27.533" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:54:52.257" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:85 msg=登录成功 uid=4
+time="2026-10-02 19:54:52.271" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:54:57.357" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:10.912" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:17.772" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:86 msg=登录成功 uid=4
+time="2026-10-02 19:58:17.787" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:17.798" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:21.173" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:36.550" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:38.553" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:38.565" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:42.208" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:42.218" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:43.744" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:49.744" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:52.925" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:52.934" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:57.912" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:57.920" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-02 19:58:58.701" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-02 19:58:58.712" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai

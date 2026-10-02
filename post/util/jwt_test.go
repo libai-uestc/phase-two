@@ -21,7 +21,7 @@ func TestBase64(t *testing.T) {
 
 func TestJWT(t *testing.T) {
 	secret := "123456"
-	header := util.DefautHeader
+	header := util.DefaultHeader
 	payload := util.JwtPayload{
 		ID:          "rj4t49tu49",
 		Issue:       "微信",

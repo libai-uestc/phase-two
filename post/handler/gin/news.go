@@ -116,7 +116,7 @@ func NewsList(ctx *gin.Context) {
 			slog.Warn("could not get name of user", "uid", ele.UserId)
 		}
 	}
-	ctx.HTML(http.StatusOK, "new_list.html", gin.H{"total": total, "data": news, "page": PageNo})
+	ctx.HTML(http.StatusOK, "news_list.html", gin.H{"total": total, "data": news, "page": PageNo})
 }
 
 func NewsBelong(ctx *gin.Context) {

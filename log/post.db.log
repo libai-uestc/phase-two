@@ -67,3 +67,567 @@
 
 2026/10/01 19:49:41 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
 [2.037ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:46:41 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[9.202ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:46:41 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.518ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:46:41 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[4.583ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:50:35 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.870ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:50:35 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:50:35 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:50:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[3.188ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:50:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:50:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.522ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:50:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:18 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[5.550ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:54:18 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.574ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:18 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:54:27 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[1.489ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:27 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.397ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:54:27 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:54:27 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:18 Error 1062 (23000): Duplicate entry 'libai' for key 'user.idx_name'
+[5.680ms] [rows:0] INSERT INTO `user` (`name`,`password`) VALUES ('libai','e10adc3949ba59abbe56e057f20f883e')
+
+2026/10/02 19:54:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[0.719ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.487ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:54:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:54:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.581ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.375ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:54:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.129ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:54:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.224ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:54:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.625ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:54:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.707ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:54:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:10 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.769ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:10 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.506ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:10 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:17 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[1.465ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:17 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.672ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:17 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.742ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:17 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.725ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:17 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.520ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:22
+[8.556ms] [rows:1] INSERT INTO `news` (`user_id`,`title`,`article`,`create_time`,`delete_time`) VALUES (4,'','','2026-10-02 19:58:36.512',NULL)
+
+2026/10/02 19:58:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.021ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 2 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:58:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 2 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:58:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[4.202ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.708ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.910ms] [rows:2] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.515ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.521ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:42 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.768ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:42 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.055ms] [rows:2] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:42 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.590ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:42 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:42 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:43 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:49 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:22
+[12.751ms] [rows:1] INSERT INTO `news` (`user_id`,`title`,`article`,`create_time`,`delete_time`) VALUES (4,'','','2026-10-02 19:58:49.705',NULL)
+
+2026/10/02 19:58:49 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.449ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 3 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:58:49 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:49 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 3 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 19:58:49 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.516ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[1.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[1.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.510ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.208ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.509ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:57 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.580ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.519ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 19:58:58 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.690ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.597ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[1.152ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.684ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.510ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:25 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.514ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:25 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:25 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:25 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[4.853ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.099ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.716ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.172ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:29 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:22
+[5.758ms] [rows:1] INSERT INTO `news` (`user_id`,`title`,`article`,`create_time`,`delete_time`) VALUES (4,'111','11111','2026-10-02 20:05:33.405',NULL)
+
+2026/10/02 20:05:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 4 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[1.191ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.623ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 4 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.327ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.511ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.513ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.149ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[1.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3 OFFSET 3
+
+2026/10/02 20:05:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[1.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:36 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.020ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.642ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:38 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:43 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.107ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 4 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:43 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.063ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:43 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:43 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 4 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:46 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.516ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 3 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:46 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:46 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 3 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:46 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.786ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.048ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 3 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:31
+[6.225ms] [rows:1] UPDATE `news` SET `delete_time`='2026-10-02 20:05:48.577' WHERE id=3 and delete_time is null
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.514ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.440ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.211ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.261ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:48 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.263ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 2 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.292ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.589ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 2 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:52 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.077ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.061ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 2 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:31
+[7.146ms] [rows:1] UPDATE `news` SET `delete_time`='2026-10-02 20:05:54.896' WHERE id=2 and delete_time is null
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.515ms] [rows:2] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.512ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:54 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.608ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:05:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[1.226ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:05:59 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[1.226ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:06:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.568ms] [rows:2] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:06:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.571ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:13 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:13 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:13 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:13 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 1 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:16 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.723ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:06:16 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.510ms] [rows:2] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:06:16 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:16 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:16 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:21 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:22
+[7.457ms] [rows:1] INSERT INTO `news` (`user_id`,`title`,`article`,`create_time`,`delete_time`) VALUES (4,'byb','bybbyb','2026-10-02 20:06:30.906',NULL)
+
+2026/10/02 20:06:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.628ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 5 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 5 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.517ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.398ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.000ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.021ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.531ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:32 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.000ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 5 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.529ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:33 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:60
+[0.799ms] [rows:1] SELECT * FROM `news` WHERE delete_time is null AND `news`.`id` = 5 ORDER BY `news`.`id` LIMIT 1
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:82
+[0.000ms] [rows:1] SELECT count(*) FROM `news` WHERE delete_time is null
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/news.go:89
+[0.523ms] [rows:3] SELECT * FROM `news` WHERE delete_time is null ORDER BY create_time desc LIMIT 3
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.513ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.000ms] [rows:0] SELECT * FROM `user` WHERE `user`.`id` = 7 ORDER BY `user`.`id` LIMIT 1
+
+2026/10/02 20:06:34 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:47
+[0.638ms] [rows:1] SELECT * FROM `user` WHERE `user`.`id` = 4 ORDER BY `user`.`id` LIMIT 1
