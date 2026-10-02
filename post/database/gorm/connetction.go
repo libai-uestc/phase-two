@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"libai/go/phase-two/post/util"
 	"log"
+	"log/slog"
 	"os"
 	"path"
 	"time"
@@ -54,6 +55,14 @@ func ConnectPostDB(confDir, confFile, fileType, logDir string) {
 	sqlDB.SetMaxOpenConns(100)
 	sqlDB.SetConnMaxLifetime(time.Hour)
 	PostDB = db
+}
+
+func PingPostDB() {
+	if PostDB != nil {
+		sqlDB, _ := PostDB.DB()
+		sqlDB.Ping()
+		slog.Info("ping post db")
+	}
 }
 
 // package gorm

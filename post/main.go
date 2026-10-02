@@ -7,11 +7,17 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/robfig/cron/v3"
 )
 
 func Init() {
 	util.InitSlog("./log/post.log")
 	database.ConnectPostDB("./post/conf", "db", util.YAML, "./log")
+
+	crontab := cron.New()
+	crontab.AddFunc("*/30 * * * *", database.PingPostDB)
+	crontab.Start()
+
 }
 
 func main() {
