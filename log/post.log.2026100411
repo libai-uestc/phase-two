@@ -1,0 +1,10 @@
+time="2026-10-04 11:00:00.001" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/connetction.go:64 msg="ping post db"
+time="2026-10-04 11:28:39.317" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-04 11:28:39.385" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-04 11:28:40.962" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-04 11:29:09.316" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-04 11:29:09.324" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-04 11:29:15.706" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:86 msg=登录成功 uid=4
+time="2026-10-04 11:29:15.723" level=WARN source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/news.go:116 msg="could not get name of user" uid=7
+time="2026-10-04 11:29:15.733" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/handler/gin/user.go:121 msg=GetUserInfo uid=4 name=libai
+time="2026-10-04 11:30:00.001" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/connetction.go:64 msg="ping post db"

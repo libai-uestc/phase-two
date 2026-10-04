@@ -65,6 +65,13 @@ func PingPostDB() {
 	}
 }
 
+func ClosePostDB() {
+	if PostDB != nil {
+		sqlDB, _ := PostDB.DB()
+		sqlDB.Close()
+	}
+}
+
 // package gorm
 
 // import (

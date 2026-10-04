@@ -1,0 +1,2 @@
+time="2026-10-04 12:00:00.002" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/connetction.go:64 msg="ping post db"
+time="2026-10-04 12:30:00.013" level=INFO source=C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/connetction.go:64 msg="ping post db"

@@ -4,9 +4,14 @@ import (
 	database "libai/go/phase-two/post/database/gorm"
 	handler "libai/go/phase-two/post/handler/gin"
 	"libai/go/phase-two/post/util"
+	"log/slog"
 	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
 
 	"github.com/gin-gonic/gin"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/robfig/cron/v3"
 )
 
@@ -20,8 +25,18 @@ func Init() {
 
 }
 
+func ListenTermSignal() {
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM)
+	sig := <-c
+	slog.Info("receive term signal " + sig.String() + ", going to exit")
+	database.ClosePostDB()
+	os.Exit(0)
+}
+
 func main() {
 	Init()
+	go ListenTermSignal()
 
 	engine := gin.Default()
 
@@ -30,6 +45,10 @@ func main() {
 	engine.StaticFile("/favicon.ico", "post/views/img/迈克尔乔丹.png")
 	engine.LoadHTMLGlob("post/views/html/*")
 
+	engine.Use(handler.Metric)
+	engine.GET("/metrics", func(ctx *gin.Context) {
+		promhttp.Handler().ServeHTTP(ctx.Writer, ctx.Request)
+	})
 	engine.GET("/login", func(ctx *gin.Context) {
 		ctx.HTML(200, "login.html", nil)
 	})
