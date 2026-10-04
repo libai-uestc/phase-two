@@ -721,3 +721,6 @@
 
 2026/10/04 15:40:37 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
 [25.029ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/04 18:57:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[1.393ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
