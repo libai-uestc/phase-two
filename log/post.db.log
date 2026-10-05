@@ -724,3 +724,12 @@
 
 2026/10/04 18:57:45 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
 [1.393ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/05 12:25:06 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[11.324ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/05 12:25:14 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[0.000ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1
+
+2026/10/05 12:27:30 C:/Users/18101/Desktop/第二阶段/phase-two/post/database/gorm/user.go:59
+[1.641ms] [rows:1] SELECT * FROM `user` WHERE name='libai' ORDER BY `user`.`id` LIMIT 1

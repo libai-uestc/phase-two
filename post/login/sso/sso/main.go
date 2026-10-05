@@ -51,7 +51,7 @@ func Login(ctx *gin.Context) {
 }
 
 func Identify(ctx *gin.Context) {
-	token := ctx.Query(sso.SSO_TOKEN_COOKIE_NAME)
+	token := ctx.Query(sso.SSO_TOKEN_QUERY_NAME)
 	_, payload, err := util.VerifyJwt(token, SECRET)
 	if err != nil {
 		ctx.String(http.StatusForbidden, "token验证失败")

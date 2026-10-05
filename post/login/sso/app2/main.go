@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	SESSION_KEY_PREFIX = "app1_session_"
+	SESSION_KEY_PREFIX = "app2_session_"
 )
 
 func checkToken(token string) (userName, userId string, valid bool) {
@@ -40,7 +40,7 @@ func checkToken(token string) (userName, userId string, valid bool) {
 }
 
 func Home(ctx *gin.Context) {
-	if cookie, err := ctx.Request.Cookie(sso.APP1_TOKEN_COOKIE_NAME); err == nil {
+	if cookie, err := ctx.Request.Cookie(sso.APP2_TOKEN_COOKIE_NAME); err == nil {
 		sessionID := cookie.Value
 		result := database.GetRedisClient().Get(context.Background(), SESSION_KEY_PREFIX+sessionID)
 		if result.Err() == nil {
@@ -50,7 +50,7 @@ func Home(ctx *gin.Context) {
 			userId := mp[sso.KEY_OF_UID]
 			userName := mp[sso.KEY_OF_NAME]
 			log.Println("根据app token，身份验证成功")
-			ctx.String(200, "这里是app1，欢迎 "+userName+"["+userId+"]")
+			ctx.String(200, "这里是app2, 欢迎 "+userName+"["+userId+"]")
 			return
 		}
 	}
@@ -76,7 +76,7 @@ func Home(ctx *gin.Context) {
 			)
 			sessionID := xid.New().String()
 			ctx.SetCookie(
-				sso.APP1_TOKEN_COOKIE_NAME,
+				sso.APP2_TOKEN_COOKIE_NAME,
 				sessionID,
 				sso.APP_TOKEN_LIFE,
 				"/",
@@ -86,7 +86,7 @@ func Home(ctx *gin.Context) {
 			)
 			info, _ := json.Marshal(map[string]string{sso.KEY_OF_UID: userId, sso.KEY_OF_NAME: userName})
 			database.GetRedisClient().Set(context.Background(), SESSION_KEY_PREFIX+sessionID, string(info), sso.APP_TOKEN_LIFE*time.Second)
-			ctx.String(200, "这里是app1，欢迎 "+userName+"["+userId+"]")
+			ctx.String(200, "这里是app2, 欢迎光临 "+userName+"["+userId+"]")
 			return
 		} else {
 			ctx.SetCookie(
@@ -98,13 +98,12 @@ func Home(ctx *gin.Context) {
 				false,
 				true,
 			)
-			url := "http://" + sso.SSO_URL + "/login?service=" + sso.APP1_URL + "/home"
+			url := "http://" + sso.SSO_URL + "/login?service=" + sso.APP2_URL + "/home"
 			ctx.Redirect(http.StatusFound, url)
 			return
 		}
 	} else {
-		url := "http://" + sso.SSO_URL + "/login?service=" + sso.APP1_URL + "/home"
-		// log.Println("redirect to " + url)
+		url := "http://" + sso.SSO_URL + "/login?service=" + sso.APP2_URL + "/home"
 		ctx.Redirect(http.StatusFound, url)
 		return
 	}
@@ -113,9 +112,9 @@ func Home(ctx *gin.Context) {
 func main() {
 	engine := gin.Default()
 	engine.GET("/home", Home)
-	if err := engine.Run(sso.APP1_URL); err != nil {
+	if err := engine.Run(sso.APP2_URL); err != nil {
 		panic(err)
 	}
 }
 
-// go run ./post/login/sso/app1
+// go run ./post/login/sso/app2
