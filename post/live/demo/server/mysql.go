@@ -58,6 +58,7 @@ func CloseDB() {
 
 // users
 type User struct {
+	Id int
 	// Name     string `gorm:"column:username"`
 	Name     string
 	PassWord string `gorm:"column:password"` // pass_word
@@ -67,16 +68,29 @@ func (User) TableName() string {
 	return "login"
 }
 
-func GetPasswordByName(name string) (string, error) {
+//	func GetPasswordByName(name string) (string, error) {
+//		var user User
+//		// GetDB().Select("password","name").Where("name=?",name).First(&user)
+//		// GetDB().Select("password").Where("name=?",name).First(&user) // ?可以防止sql注入攻击
+//		// GetDB().Select("password").Where("name=?",name).Find(&user) // 切片用find
+//		// 如果只有一个结果,可以用Take或First
+//		err := GetDB().Select("password").Where("name=?", name).Take(&user).Error
+//		if err != nil {
+//			err2 := fmt.Errorf("GetPasswordByName %w", err)
+//			return "", err2
+//		}
+//		return user.PassWord, err
+//	}
+func GetPasswordByName(name string) (*User, error) {
 	var user User
 	// GetDB().Select("password","name").Where("name=?",name).First(&user)
 	// GetDB().Select("password").Where("name=?",name).First(&user) // ?可以防止sql注入攻击
 	// GetDB().Select("password").Where("name=?",name).Find(&user) // 切片用find
 	// 如果只有一个结果,可以用Take或First
-	err := GetDB().Select("password").Where("name=?", name).Take(&user).Error
+	err := GetDB().Select("id,password").Where("name=?", name).Take(&user).Error
 	if err != nil {
 		err2 := fmt.Errorf("GetPasswordByName %w", err)
-		return "", err2
+		return nil, err2
 	}
-	return user.PassWord, err
+	return &user, err
 }
