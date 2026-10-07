@@ -1,0 +1,9 @@
+[xorm] [info]  2026/10/07 13:36:55.714292 PING DATABASE mysql
+[xorm] [info]  2026/10/07 13:36:55.733986 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [13290 本科 ["编程","golang"] 2026-10-07 13:36:55 <nil> <nil> 男 上海 1] - 3.8101ms
+[xorm] [info]  2026/10/07 13:36:55.733986 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`gender`,`city`,`version`) VALUES (?, ?, ?, ?, ?, ?, ?),(?, ?, ?, ?, ?, ?, ?) [79402 本科 ["编程","golang"] 2026-10-07 13:36:55 男 上海 1 18668 本科 ["编程","golang"] 2026-10-07 13:36:55 男 上海 1]
+[xorm] [info]  2026/10/07 13:40:05.546853 PING DATABASE mysql
+[xorm] [info]  2026/10/07 13:40:05.563439 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [66913 本科 ["编程","golang"] 2026-10-07 13:40:05 <nil> <nil> 男 上海 1] - 3.655ms
+[xorm] [info]  2026/10/07 13:40:05.567638 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`gender`,`city`,`version`) VALUES (?, ?, ?, ?, ?, ?, ?),(?, ?, ?, ?, ?, ?, ?) [68212 本科 ["编程","golang"] 2026-10-07 13:40:05 男 上海 1 64614 本科 ["编程","golang"] 2026-10-07 13:40:05 男 上海 1] - 4.1991ms
+[xorm] [info]  2026/10/07 20:26:13.064043 PING DATABASE mysql
+[xorm] [info]  2026/10/07 20:26:13.087766 [SQL] UPDATE `user` SET `delete_time` = ? WHERE (`update_time`=? OR `update_time` IS NULL) AND (`delete_time`=? OR `delete_time` IS NULL) AND `id`=? [2026-10-07 20:26:13 0001-01-01 00:00:00 0001-01-01 00:00:00 10] - 8.4701ms
+[xorm] [info]  2026/10/07 20:26:13.091419 [SQL] UPDATE `user` SET `delete_time` = ? WHERE (degree=?) AND (`update_time`=? OR `update_time` IS NULL) AND (`delete_time`=? OR `delete_time` IS NULL) [2026-10-07 20:26:13 本科 0001-01-01 00:00:00 0001-01-01 00:00:00] - 3.6532ms
