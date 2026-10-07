@@ -8,7 +8,7 @@ type User struct {
 	Degree     string
 	Keywords   []string  `xorm:"json"`
 	CreateTime time.Time `xorm:"created"`
-	UpdateTime time.Time `xorm:"deleted"`
+	UpdateTime time.Time `xorm:"updated"`
 	DeleteTime time.Time `xorm:"deleted"`
 	Gender     string
 	City       string

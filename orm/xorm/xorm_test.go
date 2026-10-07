@@ -4,6 +4,7 @@ import (
 	"libai/go/phase-two/orm/xorm"
 	"log/slog"
 	"os"
+	"sync"
 	"testing"
 )
 
@@ -40,6 +41,26 @@ func TestDelete(t *testing.T) {
 }
 
 // go test -v ./orm/xorm -run=^TestDelete$ -count=1
+
+func TestUpdate(t *testing.T) {
+	xorm.Update(engine)
+}
+
+// go test -v ./orm/xorm -run=^TestUpdate$ -count=1
+
+func TestUpdateByVersion(t *testing.T) {
+	const P = 10
+	wg := sync.WaitGroup{}
+	wg.Add(P)
+	for i := 0; i < P; i++ {
+		go func() {
+			defer wg.Done()
+			xorm.UpdateByVersion(engine)
+		}()
+	}
+	wg.Wait()
+}
+
 func TestHandleError(t *testing.T) {
 
 }
