@@ -74,6 +74,12 @@ func TestReadWithStatistics(t *testing.T) {
 
 // go test -v ./orm/xorm -run=^TestReadWithStatistics$ -count=1
 
+func TestTransaction(t *testing.T) {
+	xorm.Transaction(engine)
+}
+
+// go test -v ./orm/xorm -run=^TestTransaction$ -count=1
+
 func TestHandleError(t *testing.T) {
 
 }

@@ -65,3 +65,13 @@
 [xorm] [info]  2026/10/09 16:42:13.229659 [SQL] SELECT city, avg(id) as mid FROM `user` WHERE (`delete_time`=? OR `delete_time` IS NULL) GROUP BY city HAVING mid>0 [0001-01-01 00:00:00] - 521.5µs
 [xorm] [info]  2026/10/09 16:42:13.229659 [SQL] SELECT DISTINCT `degree`, `city` FROM `user` WHERE (`delete_time`=? OR `delete_time` IS NULL) [0001-01-01 00:00:00]
 [xorm] [info]  2026/10/09 16:42:13.230247 [SQL] SELECT count(*) FROM `user` WHERE (degree=?) AND (`delete_time`=? OR `delete_time` IS NULL) [本科 0001-01-01 00:00:00] - 588.4µs
+[xorm] [info]  2026/10/09 17:41:39.956257 PING DATABASE mysql
+[xorm] [info]  2026/10/09 17:41:39.968654 [SQL] BEGIN TRANSACTION [] - 527.8µs
+[xorm] [info]  2026/10/09 17:41:39.969271 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [10811 本科 null 2026-10-09 17:41:39 2026-10-09 17:41:39 <nil> 男 上海 1] - 617µs
+[xorm] [info]  2026/10/09 17:41:39.974413 [SQL] COMMIT [] - 5.1415ms
+[xorm] [info]  2026/10/09 17:41:39.977507 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [33143 本科 null 2026-10-09 17:41:39 2026-10-09 17:41:39 <nil> 男 上海 1] - 3.094ms
+[xorm] [info]  2026/10/09 17:42:29.441816 PING DATABASE mysql
+[xorm] [info]  2026/10/09 17:42:29.453552 [SQL] BEGIN TRANSACTION []
+[xorm] [info]  2026/10/09 17:42:29.454085 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [51940 本科 null 2026-10-09 17:42:29 2026-10-09 17:42:29 <nil> 男 上海 1] - 532.6µs
+[xorm] [info]  2026/10/09 17:42:29.454085 [SQL] INSERT INTO `user` (`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?) [69876 本科 null 2026-10-09 17:42:29 2026-10-09 17:42:29 <nil> 男 上海 1]
+[xorm] [info]  2026/10/09 17:42:29.456583 [SQL] COMMIT [] - 2.4978ms
