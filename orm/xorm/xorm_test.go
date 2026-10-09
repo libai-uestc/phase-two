@@ -61,6 +61,19 @@ func TestUpdateByVersion(t *testing.T) {
 	wg.Wait()
 }
 
+// go test -v ./orm/xorm -run=^TestUpdateByVersion$ -count=1
+
+func TestRead(t *testing.T) {
+	xorm.Read(engine)
+}
+
+// go test -v ./orm/xorm -run=^TestRead$ -count=1
+func TestReadWithStatistics(t *testing.T) {
+	xorm.ReadWithStatistics(engine)
+}
+
+// go test -v ./orm/xorm -run=^TestReadWithStatistics$ -count=1
+
 func TestHandleError(t *testing.T) {
 
 }
