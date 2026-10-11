@@ -80,6 +80,13 @@ func TestTransaction(t *testing.T) {
 
 // go test -v ./orm/xorm -run=^TestTransaction$ -count=1
 
+func TestRawSql(t *testing.T) {
+	xorm.RawSelect(engine)
+	xorm.RawExec(engine)
+}
+
+// go test -v ./orm/xorm -run=^TestRawSql$ -count=1
+
 func TestHandleError(t *testing.T) {
 
 }
