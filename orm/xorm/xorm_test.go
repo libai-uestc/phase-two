@@ -88,5 +88,7 @@ func TestRawSql(t *testing.T) {
 // go test -v ./orm/xorm -run=^TestRawSql$ -count=1
 
 func TestHandleError(t *testing.T) {
-
+	xorm.HandleError(engine)
 }
+
+//  go test -v ./orm/xorm -run=^TestHandleError$ -count=1

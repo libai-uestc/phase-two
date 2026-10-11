@@ -78,3 +78,6 @@
 [xorm] [info]  2026/10/09 19:12:35.383518 PING DATABASE mysql
 [xorm] [info]  2026/10/09 19:12:35.395734 [SQL] select id,uid,city from user where id>? and uid>? limit 3 [2 4] - 507.1µs
 [xorm] [info]  2026/10/09 19:12:35.395734 [SQL] update user set degree=? where id=? [大专 24]
+[xorm] [info]  2026/10/11 13:46:03.218294 PING DATABASE mysql
+[xorm] [info]  2026/10/11 13:46:03.245889 [SQL] SELECT `id`, `uid`, `degree`, `keywords`, `create_time`, `update_time`, `delete_time`, `gender`, `city`, `version` FROM `user` WHERE (`delete_time`=? OR `delete_time` IS NULL) LIMIT 1 [0001-01-01 00:00:00] - 9.0602ms
+[xorm] [info]  2026/10/11 13:46:03.246403 [SQL] INSERT INTO `user` (`id`,`uid`,`degree`,`keywords`,`create_time`,`update_time`,`delete_time`,`gender`,`city`,`version`) VALUES (?,?,?,?,?,?,?,?,?,?) [6 17659 本科 null 2026-10-11 13:46:03 2026-10-11 13:46:03 <nil> 男 上海 1]
