@@ -9,3 +9,34 @@
 2026/10/12 22:06:17.750541 config.go:87: [Error] Bad Gateway
 2026/10/12 22:06:17.753247 config.go:87: [Error] Not Found
 2026/10/12 22:06:17.765942 config.go:87: [Error] Not Found
+2026/10/12 22:11:06.032147 config.go:80: [Info] start fiber
+2026/10/12 22:11:06.036391 config.go:106: [Info] route path /home method GET
+2026/10/12 22:11:06.037511 config.go:106: [Info] route path /home method HEAD
+2026/10/12 22:11:13.010633 config.go:87: [Error] Bad Gateway
+2026/10/12 22:11:13.010633 config.go:87: [Error] Bad Gateway
+2026/10/12 22:11:16.353709 config.go:87: [Error] Bad Gateway
+2026/10/12 22:11:16.355826 config.go:87: [Error] Bad Gateway
+2026/10/12 22:11:16.358653 config.go:87: [Error] Not Found
+2026/10/12 22:11:16.400874 config.go:87: [Error] Not Found
+2026/10/12 22:13:41.874689 config.go:87: [Error] Bad Gateway
+2026/10/12 22:13:41.877837 config.go:87: [Error] Bad Gateway
+2026/10/12 22:13:41.878660 config.go:87: [Error] Bad Gateway
+2026/10/12 22:13:56.472389 config.go:87: [Error] Bad Gateway
+2026/10/12 22:13:56.477002 config.go:87: [Error] Bad Gateway
+2026/10/12 22:13:56.477518 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:02.052862 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:02.055811 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:02.055811 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:05.543388 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:05.547589 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:05.548202 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:05.550865 config.go:87: [Error] Not Found
+2026/10/12 22:14:05.568092 config.go:87: [Error] Not Found
+2026/10/12 22:14:08.989288 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:08.989288 config.go:87: [Error] Bad Gateway
+2026/10/12 22:14:08.993242 config.go:87: [Error] Not Found
+2026/10/12 22:14:09.033757 config.go:87: [Error] Not Found
+2026/10/12 22:15:57.820337 config.go:87: [Error] Bad Gateway
+2026/10/12 22:15:57.822929 config.go:87: [Error] Bad Gateway
+2026/10/12 22:15:57.842498 config.go:87: [Error] Not Found
+2026/10/12 22:17:38.255549 config.go:87: [Error] Not Found
