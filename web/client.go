@@ -199,7 +199,11 @@ func Request(path, method string, body []byte) {
 }
 
 func main() {
-	// student := Student{Name: "李白", Address: "江浙沪"}
+	student := Student{Name: "李白", Address: "江浙沪"}
+
+	Head("/ping")
+	Get("/home")
+	PostForm("/home", student)
 	// Get("/home")
 	// Get("/home")
 	// PostAll("/stu/multi_type", student)
@@ -215,5 +219,5 @@ func main() {
 	// Get("/user/html")
 	// Get("/user/old_page")
 
-	Request("/ck", http.MethodGet, nil)
+	// Request("/ck", http.MethodGet, nil)
 }

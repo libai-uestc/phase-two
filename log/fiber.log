@@ -1,0 +1,11 @@
+2026/10/12 22:06:08.350300 config.go:80: [Info] start fiber
+2026/10/12 22:06:08.354765 config.go:106: [Info] route path /home method GET
+2026/10/12 22:06:08.359581 config.go:106: [Info] route path /home method HEAD
+2026/10/12 22:06:14.992331 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:14.996639 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:14.996639 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:17.747659 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:17.750541 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:17.750541 config.go:87: [Error] Bad Gateway
+2026/10/12 22:06:17.753247 config.go:87: [Error] Not Found
+2026/10/12 22:06:17.765942 config.go:87: [Error] Not Found
