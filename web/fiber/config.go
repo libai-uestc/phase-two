@@ -63,7 +63,7 @@ import (
 	fiberlog "github.com/gofiber/fiber/v3/log"
 )
 
-func main() {
+func main1() {
 	// 1. 确保日志目录存在并安全打开文件
 	logDir := `C:\Users\18101\Desktop\第二阶段\phase-two\log`
 	_ = os.MkdirAll(logDir, 0755)

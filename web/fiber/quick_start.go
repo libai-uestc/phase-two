@@ -35,7 +35,7 @@ func homeHandler(ctx fiber.Ctx) error {
 
 }
 
-func main1() {
+func main2() {
 	app := fiber.New()
 	logFile, err := os.OpenFile("C:/Users/18101/Desktop/第二阶段/phase-two/log/fiber.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, os.ModePerm)
 	if err != nil {
